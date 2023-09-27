@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*Importando A Font do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,800&display=swap'); 
+
+*{
+    text-align: justify;
+}
+body{ 
+    background-color: rgb(41, 40, 40);
+    font-family: Poppins, Arial, Helvetica, sans-serif; color: white;/*Aplicando a Fonte*/
+    /*Espaçamento entre as Extremidades*/
+    padding: 5em
+    
+}
+img{
+    border-radius: 15px; /*Arredondando Borda*/
+    box-shadow: 7px 7px 7px rgba(121, 117, 117, 0.76)
+}
+
+div{/*Centralizando a imagem utilizando uma div*/
+    display: flex;
+    justify-content: center;
+}
+#box{/*Aplicando borda arredondada sobre a imagem, e adicionando uma sombra*/
+	width: 300px;
+	height:300px;
+	}
+.destaques{
+    text-align: center;
+}
+
+/*Aplicando cores sobre os Títulos*/
+h1{
+    font-size: 50px; color: #eb6600;
+    
+}
+h2{
+    /*Aplicando o Traço inferior nos Títulos de nível 2 e Mudando a cor da fonte*/
+    border-style: solid;
+  border-bottom-width: 3px;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+    font-size: 30px; color: #FA7D01;
+}
+blockquote{
+    text-align: right;
+}
+a{
+    color: rgb(255, 232, 25);
+}
+a:hover{
+    color: rgb(223, 216, 156);
+}
