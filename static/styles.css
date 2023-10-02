@@ -6,7 +6,7 @@
     text-align: justify;
 }
 body{ 
-    background-color: rgb(41, 40, 40);
+    background-image: linear-gradient(to bottom,rgb(12, 12, 12),rgb(41, 40, 40));
     font-family: Poppins, Arial, Helvetica, sans-serif; color: white;/*Aplicando a Fonte*/
     /*Espaçamento entre as Extremidades*/
     padding: 5em
@@ -31,24 +31,26 @@ div{/*Centralizando a imagem utilizando uma div*/
 
 /*Aplicando cores sobre os Títulos*/
 h1{
-    font-size: 50px; color: #eb6600;
+    font-size: 50px; color: #d85e00;
     
 }
 h2{
     /*Aplicando o Traço inferior nos Títulos de nível 2 e Mudando a cor da fonte*/
     border-style: solid;
-  border-bottom-width: 3px;
-  border-top-width: 0;
-  border-right-width: 0;
-  border-left-width: 0;
+    border-bottom-width: 3px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
     font-size: 30px; color: #FA7D01;
 }
 blockquote{
     text-align: right;
 }
 a{
-    color: rgb(255, 232, 25);
+    color: #0BD97E;
+    text-decoration: none;
 }
 a:hover{
-    color: rgb(223, 216, 156);
+    text-decoration: underline;
+    color: #055732;
 }
