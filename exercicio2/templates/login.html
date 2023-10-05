@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        @media (max-width: 600px) {
+            table {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>{{titulo}}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>João da Silva</td>
+                <td>joao@email.com</td>
+                <td>(11) 555-1234</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Maria Oliveira</td>
+                <td>maria@email.com</td>
+                <td>(21) 555-5678</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Carlos Pereira</td>
+                <td>carlos@email.com</td>
+                <td>(31) 555-9012</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
