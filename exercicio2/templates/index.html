@@ -70,9 +70,18 @@
         .login-container .signup-link a:hover {
             text-decoration: underline;
         }
+        #dark-mode-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+    <div style="position: absolute; top: 20px; right: 20px;">
+        <button onclick="toggleDarkMode()">Alternar Modo</button>
+    </div>
     <div class="login-container">
         <h2>Login</h2>
         <form action="/login" method="POST">
@@ -84,5 +93,20 @@
             Não tem uma conta? <a href="#">Registre-se</a>
         </div>
     </div>
+    <script>
+        // Função para alternar entre o modo claro e escuro
+        function toggleDarkMode() {
+            const body = document.body;
+            const currentBackgroundColor = window.getComputedStyle(body).backgroundColor;
+
+            if (currentBackgroundColor === 'rgb(244, 244, 244)') {
+                // Está no modo claro, mude para modo escuro
+                body.style.backgroundColor = '#333'; // Altere para o estilo de modo escuro desejado
+            } else {
+                // Está no modo escuro, mude para modo claro
+                body.style.backgroundColor = '#f4f4f4'; // Altere para o estilo de modo claro desejado
+            }
+        }
+    </script>
 </body>
 </html>

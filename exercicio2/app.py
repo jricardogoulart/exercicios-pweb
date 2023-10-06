@@ -20,7 +20,8 @@ def login():
 
 @app.route('/sucesso')
 def sucesso():
-    return "Login realizado com sucesso!"
+    return render_template('login.html')
+    
 
 @app.route('/erro')
 def erro():
