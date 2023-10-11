@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Seu cabeçalho e outros elementos do HTML -->
+</head>
+<body>
+    <!-- Seção de conteúdo do seu modelo -->
+    <script>
+        window.onload = function() {
+            var alert_message = "{{ alert_message }}";  // Recebe a mensagem do Flask.
+            if (alert_message) {
+                alert(alert_message);
+            }
+        };
+    </script>
+    <!-- Outro conteúdo do modelo -->
+</body>
+</html>
