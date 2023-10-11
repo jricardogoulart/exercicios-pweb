@@ -7,8 +7,12 @@ usuarios_permitidos = {"admin": "123"}
 def index():
     return render_template('index.html')
 
-@app.route('/login', methods=['POST'])
+@app.route('/login')
 def login():
+    return render_template('login.html')
+
+@app.route('/login', methods=['POST'])
+def logineffect():
     
     username = request.form.get('username')
     password = request.form.get('password')
@@ -24,13 +28,23 @@ def account():
 
 @app.route('/sucesso')
 def sucesso():
-    return render_template('login.html', titulo="Lista dos Clientes")
+    return render_template('table.html', titulo="Lista dos Clientes")
 
 @app.route('/cadastro', methods=['POST'])
 def cadastro():
-    alert_message = "Usuário Cadastrado com Sucesso "  # Defina a mensagem que deseja exibir no alerta.
+    # Obtém os dados do formulário
+    username = request.form.get('username')
+    password = request.form.get('password')
+
+    # Verifica se o usuário já existe no dicionário de usuários permitidos
+    if username in usuarios_permitidos:
+        return "Usuário já cadastrado"
+
+    # Adiciona o novo usuário ao dicionário
+    usuarios_permitidos[username] = password
+
+    alert_message = "Usuário Cadastrado com Sucesso"
     return render_template('alert.html', alert_message=alert_message)
-    
     
 
 @app.route('/erro')

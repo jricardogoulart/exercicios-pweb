@@ -3,110 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .login-container {
-            background-color: #fff;
-            padding: 20px 30px 20px 10px;
-            border-radius: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-
-        .login-container h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin: 0px 0px 40px 0px;
-            padding-left: 25px;
-        
-        }
-
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-        }
-
-        .login-container input[type="submit"] {
-            width: 100%;
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            margin: 0px 10px 0px 10px;
-        }
-
-        .login-container input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        .login-container .signup-link {
-            text-align: center;
-            margin-top: 20px; /* Adiciona espaçamento acima do link de registro */
-        }
-
-        .login-container .signup-link a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .login-container .signup-link a:hover {
-            text-decoration: underline;
-        }
-        #dark-mode-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Página Inicial</title>
 </head>
 <body>
-    <div style="position: absolute; top: 20px; right: 20px;">
-        <button onclick="toggleDarkMode()">Alternar Modo</button>
-    </div>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="/login" method="POST">
-            <input type="text" id="username" placeholder="Nome de usuário" name="username" required>
-            <input type="password" id="password" placeholder="Senha" name="password" required>
-            <input type="submit" value="Entrar">
-        </form>
-        <div class="signup-link">
-            Não tem uma conta? <a href="/account">Registre-se</a>
-        </div>
-    </div>
-    <script>
-        // Função para alternar entre o modo claro e escuro
-        function toggleDarkMode() {
-            const body = document.body;
-            const currentBackgroundColor = window.getComputedStyle(body).backgroundColor;
-
-            if (currentBackgroundColor === 'rgb(244, 244, 244)') {
-                // Está no modo claro, mude para modo escuro
-                body.style.backgroundColor = '#333'; // Altere para o estilo de modo escuro desejado
-            } else {
-                // Está no modo escuro, mude para modo claro
-                body.style.backgroundColor = '#f4f4f4'; // Altere para o estilo de modo claro desejado
-            }
-        }
-    </script>
+    <h1>Página Inicial</h1>
+    <p>Clique <a href="{{ url_for('login') }}">aqui</a> para logar</p>
 </body>
 </html>

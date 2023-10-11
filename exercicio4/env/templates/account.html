@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <title>Página de Cadastro</title>
     <style>
         body {
@@ -80,7 +81,7 @@
             <input type="submit" value="Cadastrar">
         </form>
         <div class="login-link">
-            Já tem uma conta? <a href="/">Faça Login</a>
+            Já tem uma conta? <a href="{{ url_for('login') }}">Faça Login</a>
         </div>
     </div>
 </body>
