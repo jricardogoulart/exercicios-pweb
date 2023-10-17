@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .centered-div {
+            text-align: center;
+        }
+        h2 {
+            background-image: linear-gradient(to right, #007BFF, #00A9FF, #00D7FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
+        .btn-custom {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-div">
+        <h2>Homepage</h2>
+        <p>Olá, Seja bem-vindo ao meu teste utilizando rotas em flask, vá adiante!</p>
+        <a class="btn btn-custom" href="/login">Ir para Login</a>
+    </div>
+</body>
+</html>
