@@ -9,6 +9,9 @@
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
@@ -18,7 +21,7 @@
         }
 
         table {
-            width: 100%;
+            width: 80%;
             border-collapse: collapse;
             margin-top: 20px;
         }
@@ -50,30 +53,38 @@
     <table>
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
+                <th>CPF</th>
                 <th>Email</th>
-                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>CEP</th>
+                <th>Cidade</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
                 <td>João da Silva</td>
+                <td>123.456.789-00</td>
                 <td>joao@email.com</td>
-                <td>(11) 555-1234</td>
+                <td>Rua Exemplo, 123</td>
+                <td>12345-678</td>
+                <td>São Paulo</td>
             </tr>
             <tr>
-                <td>2</td>
                 <td>Maria Oliveira</td>
+                <td>987.654.321-00</td>
                 <td>maria@email.com</td>
-                <td>(21) 555-5678</td>
+                <td>Avenida Teste, 456</td>
+                <td>98765-432</td>
+                <td>Rio de Janeiro</td>
             </tr>
             <tr>
-                <td>3</td>
                 <td>Carlos Pereira</td>
+                <td>456.789.123-00</td>
                 <td>carlos@email.com</td>
-                <td>(31) 555-9012</td>
+                <td>Rua da Amostra, 789</td>
+                <td>45678-912</td>
+                <td>Belo Horizonte</td>
             </tr>
         </tbody>
     </table>

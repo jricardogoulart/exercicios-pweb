@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@
             background-clip: text;
             color: transparent;
             font-size: 36px;
-        
+
         }
 
         .login-container input[type="text"],
@@ -64,7 +65,8 @@
 
         .login-container .signup-link {
             text-align: center;
-            margin-top: 20px; /* Adiciona espaçamento acima do link de registro */
+            margin-top: 20px;
+            /* Adiciona espaçamento acima do link de registro */
         }
 
         .login-container .signup-link a {
@@ -75,6 +77,7 @@
         .login-container .signup-link a:hover {
             text-decoration: underline;
         }
+
         #dark-mode-toggle {
             position: absolute;
             top: 20px;
@@ -83,6 +86,7 @@
         }
     </style>
 </head>
+
 <body>
     <div style="position: absolute; top: 20px; right: 20px;">
         <button onclick="toggleDarkMode()">Alternar Modo</button>
@@ -97,7 +101,6 @@
         <div class="signup-link">
             Não tem uma conta? <a href="/register">Registre-se</a>
         </div>
-    </div>
     <script>
         // Função para alternar entre o modo claro e escuro
         function toggleDarkMode() {
@@ -114,4 +117,5 @@
         }
     </script>
 </body>
+
 </html>
