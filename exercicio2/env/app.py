@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request,redirect, url_for
+from flask import Flask, render_template, request,redirect, url_for,flash
 import mysql.connector
 
 app = Flask(__name__)
@@ -22,11 +22,8 @@ def criar():
     mycursor.execute(query)
     resultado = mycursor.fetchall()
 
-    return render_template('register.html', usuarios = resultado)
 
-@app.route('/register')
-def visualizar():
-    return render_template('register.html')
+    return render_template('register.html', usuarios = resultado)
 
 @app.route('/registrando',methods=['POST'])
 def register():
@@ -65,9 +62,37 @@ def login():
 
 @app.route('/sucesso')
 def sucesso():
-    return render_template('tabela.html',titulo='Cadastro')
+    return render_template('tabela.html',titulo='Cadastros Clientes')
     
+@app.route('/deleteUser/<usuario>')
+def delete(usuario):
+    db = mysql.connector.connect(
+        host='mysql01.cgkdrobnydiy.us-east-1.rds.amazonaws.com',
+        user='aluno_fatec',
+        password='aluno_fatec',
+        database='meu_banco'
+    )
+    mycursor = db.cursor()
+    query = "delete from ze_TB_user where usuario = '"+ usuario + "'"
+    print(query)
+    mycursor.execute(query)
+    db.commit()
+    return redirect(url_for('criar'))
 
+@app.route('/changeUser/<usuario>')
+def change(usuario):
+    db = mysql.connector.connect(
+        host='mysql01.cgkdrobnydiy.us-east-1.rds.amazonaws.com',
+        user='aluno_fatec',
+        password='aluno_fatec',
+        database='meu_banco'
+    )
+    mycursor = db.cursor()
+    query="select usuario,senha from ze_TB_user where usuario = '"+ usuario +"'"
+    mycursor.execute(query)
+    resultado = mycursor.fetchall()
+    return render_template('change.html', usuarios=resultado) 
+    
 
 @app.route('/erro')
 def erro():
